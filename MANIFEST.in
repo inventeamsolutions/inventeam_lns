@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include inventeam_lns *.css
+recursive-include inventeam_lns *.csv
+recursive-include inventeam_lns *.html
+recursive-include inventeam_lns *.ico
+recursive-include inventeam_lns *.js
+recursive-include inventeam_lns *.json
+recursive-include inventeam_lns *.md
+recursive-include inventeam_lns *.png
+recursive-include inventeam_lns *.py
+recursive-include inventeam_lns *.svg
+recursive-include inventeam_lns *.txt
+recursive-exclude inventeam_lns *.pyc
