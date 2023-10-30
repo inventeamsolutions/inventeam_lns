@@ -15,12 +15,16 @@
   {
    "fieldname": "template_name",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Template Name",
    "options": "Whatsapp Templates"
   },
   {
    "fieldname": "keywords",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Keywords",
    "options": "Keyword Master"
   },
@@ -33,7 +37,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-30 13:14:14.581801",
+ "modified": "2023-10-30 18:13:58.004053",
  "modified_by": "Administrator",
  "module": "Inventeam LNS",
  "name": "Whatsapp Campaign",
