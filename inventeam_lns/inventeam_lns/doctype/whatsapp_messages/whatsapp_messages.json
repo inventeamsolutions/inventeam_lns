@@ -12,7 +12,8 @@
   "keyword",
   "message_id",
   "sent_time",
-  "response"
+  "request_data",
+  "response_data"
  ],
  "fields": [
   {
@@ -51,14 +52,19 @@
    "read_only": 1
   },
   {
-   "fieldname": "response",
+   "fieldname": "request_data",
    "fieldtype": "JSON",
-   "label": "Response"
+   "label": "Request Data"
+  },
+  {
+   "fieldname": "response_data",
+   "fieldtype": "JSON",
+   "label": "Response Data"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-09 14:49:41.529332",
+ "modified": "2023-11-09 16:11:20.844018",
  "modified_by": "Administrator",
  "module": "Inventeam LNS",
  "name": "Whatsapp Messages",

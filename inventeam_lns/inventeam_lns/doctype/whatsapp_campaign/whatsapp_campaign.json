@@ -31,13 +31,14 @@
   {
    "fieldname": "message_count",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Message Count",
    "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-30 18:13:58.004053",
+ "modified": "2023-11-09 16:12:00.392866",
  "modified_by": "Administrator",
  "module": "Inventeam LNS",
  "name": "Whatsapp Campaign",
