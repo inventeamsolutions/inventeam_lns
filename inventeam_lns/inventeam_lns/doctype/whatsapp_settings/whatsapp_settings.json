@@ -23,21 +23,21 @@
    "label": "API Setting"
   },
   {
-   "default": "https://astrogazers.in/api/",
+   "default": "https://inventeam.link/api/",
    "fieldname": "api_url",
    "fieldtype": "Data",
    "label": "API URL",
    "read_only": 1
   },
   {
-   "default": "createinstance.php?access_token=",
+   "default": "create_instance?access_token=",
    "fieldname": "create_instance",
    "fieldtype": "Data",
    "label": "Create Instance",
    "read_only": 1
   },
   {
-   "default": "getqrcode.php?instance_id={instanceid}&access_token={accesstoken}",
+   "default": "get_qrcode?instance_id={instanceid}&access_token={accesstoken}",
    "fieldname": "get_qr_code",
    "fieldtype": "Data",
    "label": "Get QR Code",
@@ -59,7 +59,7 @@
    "read_only": 1
   },
   {
-   "default": "send.php?number={wamobileno}&type={messagetype}&message={wamessage}&instance_id={instanceid}&access_token={accesstoken}",
+   "default": "send",
    "fieldname": "send_message_url",
    "fieldtype": "Data",
    "label": "Send Message URL",
@@ -69,7 +69,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-30 14:31:31.130771",
+ "modified": "2023-11-09 15:13:19.384360",
  "modified_by": "Administrator",
  "module": "Inventeam LNS",
  "name": "Whatsapp Settings",

@@ -8,7 +8,6 @@
  "engine": "InnoDB",
  "field_order": [
   "label",
-  "message",
   "to",
   "keyword",
   "message_id",
@@ -23,11 +22,6 @@
    "in_standard_filter": 1,
    "label": "Label",
    "read_only": 1
-  },
-  {
-   "fieldname": "message",
-   "fieldtype": "Small Text",
-   "label": "Message"
   },
   {
    "fieldname": "to",
@@ -64,7 +58,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-30 15:24:07.074058",
+ "modified": "2023-11-09 14:49:41.529332",
  "modified_by": "Administrator",
  "module": "Inventeam LNS",
  "name": "Whatsapp Messages",
