@@ -2,10 +2,6 @@ frappe.ui.form.on('Whatsapp Campaign', {
 	refresh: function(frm) {
 		frm.set_df_property("whatsapp_campaign_items", "cannot_add_rows", true);
         frm.set_df_property("whatsapp_campaign_items", "cannot_delete_rows", true);
-
-		if(frm.doc.keywords && (frm.doc.whatsapp_campaign_items.length === 0 || !frm.doc.whatsapp_campaign_items)) {
-			get_contacts(frm);
-		}
 	},
 	keywords: function(frm) {
 		get_contacts(frm);
