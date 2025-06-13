@@ -129,6 +129,14 @@ app_license = "MIT"
 # Scheduled Tasks
 # ---------------
 
+scheduler_events = {
+    "cron": {
+        "*  *  * * *": [
+            "inventeam_lns.inventeam_lns.doctype.whatsapp_campaign.whatsapp_campaign.get_single_whatsapp_contact"
+        ]
+    }
+}
+
 # scheduler_events = {
 #	"all": [
 #		"inventeam_lns.tasks.all"

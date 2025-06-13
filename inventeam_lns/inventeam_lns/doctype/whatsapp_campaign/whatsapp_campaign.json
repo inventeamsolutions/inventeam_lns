@@ -9,7 +9,9 @@
  "field_order": [
   "template_name",
   "keywords",
-  "message_count"
+  "message_count",
+  "section_break_yawr",
+  "whatsapp_campaign_items"
  ],
  "fields": [
   {
@@ -34,11 +36,20 @@
    "in_list_view": 1,
    "label": "Message Count",
    "read_only": 1
+  },
+  {
+   "fieldname": "whatsapp_campaign_items",
+   "fieldtype": "Table",
+   "options": "Whatsapp Campaign Items"
+  },
+  {
+   "fieldname": "section_break_yawr",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-09 16:12:00.392866",
+ "modified": "2025-06-12 16:35:33.944928",
  "modified_by": "Administrator",
  "module": "Inventeam LNS",
  "name": "Whatsapp Campaign",
