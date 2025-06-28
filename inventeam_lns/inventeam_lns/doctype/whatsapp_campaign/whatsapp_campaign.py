@@ -26,7 +26,6 @@ def get_whatsapp_contacts(keyword):
 
     return sql_data
 
-
 @frappe.whitelist()
 def get_single_whatsapp_contact():
     wa_setting = frappe.get_doc("Whatsapp Settings", "Whatsapp Settings")
@@ -50,47 +49,47 @@ def get_single_whatsapp_contact():
         INNER JOIN `tabWhatsapp Campaign` AS wc
         ON wci.parent=wc.name
         WHERE wci.sent=0
-        ORDER BY wci.creation ASC LIMIT 1
+        ORDER BY wci.creation ASC LIMIT 2
     """
     sql_data = frappe.db.sql(sql_query, as_dict=True)
 
     wadata = {}
     if sql_data:
-        row = sql_data[0]
+        for row in sql_data:
+        #row = sql_data[0]
         
-        template_name = row["template_name"]
-        wa_template = frappe.get_doc("Whatsapp Templates", template_name)
-        wa_message = wa_template.message
-        wa_file = wa_template.file
-        wa_message_type = wa_template.message_type
+            template_name = row.template_name
+            wa_template = frappe.get_doc("Whatsapp Templates", template_name)
+            wa_message = wa_template.message
+            wa_file = wa_template.file
+            wa_message_type = wa_template.message_type
 
-        if wa_message_type == "media":
-            wadata = {
-                "number": "91" + row["mobileno"],
-                "type": "media",
-                "media_url": "https://" + current_domain + wa_file,
-                "message": wa_message.replace("{$}", row["contact_name"]),
-                "instance_id": api_instanceid,
-                "access_token": api_accesstoken
-            }
-        else:
-            wadata = {
-                "number": "91" + row["mobileno"],
-                "type": "text",
-                "message": wa_message.replace("{$}", row["contact_name"]),
-                "instance_id": api_instanceid,
-                "access_token": api_accesstoken
-            }
-            
-        enqueue_send_whatsapp_message(
-            new_api_message_url,
-            wadata,
-            row["mobileno"],
-            template_name,
-            row["keywords"]
-        )
-        frappe.db.set_value("Whatsapp Campaign Items", row["name"], "sent", 1)
-        
+            if wa_message_type == "media":
+                wadata = {
+                    "number": "91" + row.mobileno,
+                    "type": "media",
+                    "media_url": "https://" + current_domain + wa_file,
+                    "message": wa_message.replace("{$}", row.contact_name),
+                    "instance_id": api_instanceid,
+                    "access_token": api_accesstoken
+                }
+            else:
+                wadata = {
+                    "number": "91" + row.mobileno,
+                    "type": "text",
+                    "message": wa_message.replace("{$}", row.contact_name),
+                    "instance_id": api_instanceid,
+                    "access_token": api_accesstoken
+                }
+                
+            enqueue_send_whatsapp_message(
+                new_api_message_url,
+                wadata,
+                row.mobileno,
+                template_name,
+                row.keywords
+            )
+            frappe.db.set_value("Whatsapp Campaign Items", row.name, "sent", 1)
     
 def enqueue_send_whatsapp_message(api_url, wadata, contact_number, templatename, keyword):
     frappe.enqueue(
