@@ -49,7 +49,7 @@ def get_single_whatsapp_contact():
         INNER JOIN `tabWhatsapp Campaign` AS wc
         ON wci.parent=wc.name
         WHERE wci.sent=0
-        ORDER BY wci.creation ASC LIMIT 2
+        ORDER BY wci.creation ASC LIMIT 3
     """
     sql_data = frappe.db.sql(sql_query, as_dict=True)
 
