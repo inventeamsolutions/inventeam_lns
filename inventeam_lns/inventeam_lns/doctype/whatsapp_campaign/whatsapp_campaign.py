@@ -28,6 +28,20 @@ def get_whatsapp_contacts(keyword):
 
 @frappe.whitelist()
 def get_single_whatsapp_contact():
+    # Send Message between 9 A.M. to 8 P.M
+    from frappe.utils import now_datetime
+
+    current_time = now_datetime().time()
+    
+    # Define your time window
+    from datetime import time as dt_time
+    start_time = dt_time(9, 0, 0)   # 9:00 AM
+    end_time = dt_time(20, 0, 0)    # 8:00 PM
+
+    if not (start_time <= current_time <= end_time):
+        frappe.logger().info("WhatsApp sending skipped: Outside working hours.")
+        return
+    
     wa_setting = frappe.get_doc("Whatsapp Settings", "Whatsapp Settings")
     api_url = wa_setting.api_url
     api_accesstoken = wa_setting.access_token
