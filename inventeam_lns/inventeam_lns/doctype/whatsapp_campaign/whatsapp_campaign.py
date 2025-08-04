@@ -235,7 +235,9 @@ class WhatsappCampaign(Document):
                 elif wa_message_type == "video_link":
                     template_name = video_link_template
 
-                wadata = meta_message_body("91" + row.mobileno, template_name, wa_message_type, "https://" + current_domain + wa_file, file_name, wa_message)
+                encoded_url = urllib.parse.quote("https://" + current_domain + wa_file, safe=':/?=&')
+
+                wadata = meta_message_body("91" + row.mobileno, template_name, wa_message_type, encoded_url, file_name, wa_message)
 
                 enqueue_send_whatsapp_message_meta(
                     meta_api_url,
