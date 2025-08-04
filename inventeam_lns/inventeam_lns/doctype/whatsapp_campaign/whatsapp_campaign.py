@@ -6,6 +6,7 @@ from frappe.utils import get_request_site_address
 from urllib.parse import urlparse
 from frappe.model.document import Document
 from frappe.integrations.utils import make_post_request
+import urllib.parse
 
 class WhatsappCampaign(Document):
     def after_insert(self):
@@ -407,6 +408,10 @@ def meta_message_body(contact_number, templatename, wa_message_type, file_link, 
                                     {
                                         "type": "text",
                                         "text": file_link
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": message
                                     }
                                 ]
                             }
