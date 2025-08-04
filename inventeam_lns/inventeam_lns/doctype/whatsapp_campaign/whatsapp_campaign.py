@@ -194,6 +194,7 @@ class WhatsappCampaign(Document):
         document_template = wa_setting.document_template
         image_template = wa_setting.image_template
         video_template = wa_setting.video_template
+        video_link_template = wa_setting.video_link_template
         file_name = wa_setting.file_name
 
 

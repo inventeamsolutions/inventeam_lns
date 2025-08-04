@@ -22,6 +22,7 @@
   "document_template",
   "image_template",
   "video_template",
+  "video_link_template",
   "file_name"
  ],
  "fields": [
@@ -112,12 +113,17 @@
    "fieldname": "file_name",
    "fieldtype": "Data",
    "label": "File Name"
+  },
+  {
+   "fieldname": "video_link_template",
+   "fieldtype": "Data",
+   "label": "Video Link Template"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-08-01 14:27:30.896065",
+ "modified": "2025-08-04 13:55:19.256234",
  "modified_by": "Administrator",
  "module": "Inventeam LNS",
  "name": "Whatsapp Settings",
