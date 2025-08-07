@@ -201,7 +201,7 @@ class WhatsappCampaign(Document):
 
         template_name = self.template_name
         wa_template = frappe.get_doc("Whatsapp Templates", template_name)
-        wa_message = wa_template.message
+        wa_message = wa_template.message.replace("\n", " ")
         wa_file = wa_template.file
         wa_message_type = wa_template.message_type
 
