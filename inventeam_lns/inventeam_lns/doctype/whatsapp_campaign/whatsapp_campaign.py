@@ -302,15 +302,6 @@ def meta_message_body(contact_number, templatename, wa_message_type, file_link, 
                                     }
                                 }
                                 ]
-                            },
-                            {
-                                "type": "body",
-                                "parameters": [
-                                    {
-                                        "type": "text",
-                                        "text": message
-                                    }
-                                ]
                             }
                         ]
                     },
@@ -340,15 +331,6 @@ def meta_message_body(contact_number, templatename, wa_message_type, file_link, 
                                     }
                                 }
                                 ]
-                            },
-                            {
-                                "type": "body",
-                                "parameters": [
-                                    {
-                                        "type": "text",
-                                        "text": message
-                                    }
-                                ]
                             }
                         ]
                     },
@@ -377,15 +359,6 @@ def meta_message_body(contact_number, templatename, wa_message_type, file_link, 
                                     }
                                 }
                                 ]
-                            },
-                            {
-                                "type": "body",
-                                "parameters": [
-                                    {
-                                        "type": "text",
-                                        "text": message
-                                    }
-                                ]
                             }
                         ]
                     },
@@ -410,10 +383,6 @@ def meta_message_body(contact_number, templatename, wa_message_type, file_link, 
                                     {
                                         "type": "text",
                                         "text": file_link
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": message
                                     }
                                 ]
                             }
@@ -423,4 +392,147 @@ def meta_message_body(contact_number, templatename, wa_message_type, file_link, 
                         "custom_callback_data": "<optional_value>"
                     }
                 }
+    # if wa_message_type == "document":
+    #     wadata = {
+    #                 "to": contact_number,
+    #                 "type": "template",
+    #                 "source": "external",
+    #                 "template": {
+    #                     "name": templatename,
+    #                     "language": {
+    #                     "code": "en"
+    #                     },
+    #                     "components": [
+    #                         {
+    #                             "type": "header",
+    #                             "parameters": [
+    #                             {
+    #                                 "type": "document",
+    #                                 "document": {
+    #                                     "link": file_link,
+    #                                     "filename": file_name
+    #                                 }
+    #                             }
+    #                             ]
+    #                         },
+    #                         {
+    #                             "type": "body",
+    #                             "parameters": [
+    #                                 {
+    #                                     "type": "text",
+    #                                     "text": message
+    #                                 }
+    #                             ]
+    #                         }
+    #                     ]
+    #                 },
+    #                 "metaData": {
+    #                     "custom_callback_data": "<optional_value>"
+    #                 }
+    #             }
+    # elif wa_message_type == "image":
+    #    wadata = {
+    #                 "to": contact_number,
+    #                 "type": "template",
+    #                 "source": "external",
+    #                 "template": {
+    #                     "name": templatename,
+    #                     "language": {
+    #                     "code": "en"
+    #                     },
+    #                     "components": [
+    #                         {
+    #                             "type": "header",
+    #                             "parameters": [
+    #                             {
+    #                                 "type": "image",
+    #                                 "image": {
+    #                                     "link": file_link,
+    #                                     "filename": file_name
+    #                                 }
+    #                             }
+    #                             ]
+    #                         },
+    #                         {
+    #                             "type": "body",
+    #                             "parameters": [
+    #                                 {
+    #                                     "type": "text",
+    #                                     "text": message
+    #                                 }
+    #                             ]
+    #                         }
+    #                     ]
+    #                 },
+    #                 "metaData": {
+    #                     "custom_callback_data": "<optional_value>"
+    #                 }
+    #             }
+    # elif wa_message_type == "video":
+    #    wadata = {
+    #                 "to": contact_number,
+    #                 "type": "template",
+    #                 "source": "external",
+    #                 "template": {
+    #                     "name": templatename,
+    #                     "language": {
+    #                     "code": "en"
+    #                     },
+    #                     "components": [
+    #                         {
+    #                             "type": "header",
+    #                             "parameters": [
+    #                             {
+    #                                 "type": "video",
+    #                                 "video": {
+    #                                     "link": file_link
+    #                                 }
+    #                             }
+    #                             ]
+    #                         },
+    #                         {
+    #                             "type": "body",
+    #                             "parameters": [
+    #                                 {
+    #                                     "type": "text",
+    #                                     "text": message
+    #                                 }
+    #                             ]
+    #                         }
+    #                     ]
+    #                 },
+    #                 "metaData": {
+    #                     "custom_callback_data": "<optional_value>"
+    #                 }
+    #             }
+    # elif wa_message_type == "video_link":
+    #     wadata = {
+    #                 "to": contact_number,
+    #                 "type": "template",
+    #                 "source": "external",
+    #                 "template": {
+    #                     "name": templatename,
+    #                     "language": {
+    #                     "code": "en"
+    #                     },
+    #                     "components": [
+    #                         {
+    #                             "type": "body",
+    #                             "parameters": [
+    #                                 {
+    #                                     "type": "text",
+    #                                     "text": file_link
+    #                                 },
+    #                                 {
+    #                                     "type": "text",
+    #                                     "text": message
+    #                                 }
+    #                             ]
+    #                         }
+    #                     ]
+    #                 },
+    #                 "metaData": {
+    #                     "custom_callback_data": "<optional_value>"
+    #                 }
+    #             }
     return wadata
