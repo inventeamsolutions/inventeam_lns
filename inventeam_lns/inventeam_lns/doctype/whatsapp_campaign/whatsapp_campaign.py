@@ -225,19 +225,19 @@ class WhatsappCampaign(Document):
         wadata = {}
         for row in data:
             if meta_api_url:
-                template_name = ''
+                wa_template_name = ''
                 if wa_message_type == "document":
-                    template_name = document_template
+                    wa_template_name = document_template
                 elif wa_message_type == "image":
-                    template_name = image_template
+                    wa_template_name = image_template
                 elif wa_message_type == "video":
-                    template_name = video_template
+                    wa_template_name = video_template
                 elif wa_message_type == "video_link":
-                    template_name = video_link_template
+                    wa_template_name = video_link_template
 
                 encoded_url = urllib.parse.quote("https://" + current_domain + wa_file, safe=':/?=&')
 
-                wadata = meta_message_body("91" + row.mobileno, template_name, wa_message_type, encoded_url, file_name, wa_message)
+                wadata = meta_message_body("91" + row.mobileno, wa_template_name, wa_message_type, encoded_url, file_name, wa_message)
 
                 enqueue_send_whatsapp_message_meta(
                     meta_api_url,
