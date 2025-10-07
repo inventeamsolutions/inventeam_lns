@@ -1,5 +1,7 @@
 {
  "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:keyword_name",
  "creation": "2023-10-30 12:40:40.920479",
@@ -20,7 +22,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-30 12:40:40.920479",
+ "modified": "2025-10-07 15:05:14.911196",
  "modified_by": "Administrator",
  "module": "Inventeam LNS",
  "name": "Keyword Master",
