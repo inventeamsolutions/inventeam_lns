@@ -326,8 +326,7 @@ def meta_message_body(contact_number, templatename, wa_message_type, file_link, 
                                 {
                                     "type": "image",
                                     "image": {
-                                        "link": file_link,
-                                        "filename": file_name
+                                        "link": file_link
                                     }
                                 }
                                 ]
