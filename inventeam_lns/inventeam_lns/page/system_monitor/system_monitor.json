@@ -1,0 +1,23 @@
+{
+ "content": null,
+ "creation": "2025-11-10 11:21:57.257008",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2025-11-10 11:21:57.257008",
+ "modified_by": "Administrator",
+ "module": "Inventeam LNS",
+ "name": "system_monitor",
+ "owner": "Administrator",
+ "page_name": "system_monitor",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "System Monitor"
+}
